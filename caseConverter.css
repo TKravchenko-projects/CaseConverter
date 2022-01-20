@@ -1,0 +1,28 @@
+body {
+    background: #1b2631;
+}
+
+.title {
+    color: #f1c40f;
+    font-size: 30pt;
+}
+
+textarea {
+    background-color: #748CAB;
+    border-style: solid;
+    border-color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24pt;
+    width: 90%;
+    height: 420px;
+}
+
+button {
+    background-color: #1b2631;
+    margin: 10px 20px;
+    padding: 10px 30px;
+    border: 2px solid #f1c40f;
+    color: #f1c40f;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14pt;
+}

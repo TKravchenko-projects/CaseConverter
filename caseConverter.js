@@ -2,6 +2,7 @@ const upperCaseBtn = document.getElementById('upper-case');
 const lowerCaseBtn = document.getElementById('lower-case');
 const properCaseBtn = document.getElementById('proper-case');
 const sentenceCaseBtn = document.getElementById('sentence-case');
+const saveTextFileBtn = document.getElementById('save-text-file')
 const textAreaObj = document.getElementById('text');
 
 upperCaseBtn.onclick = function () {
@@ -40,4 +41,21 @@ function shouldCapitalizeFirstLetter(words, id) {
 
     const prevWord = words[id - 1];
     return prevWord.charAt(prevWord.length - 1) === ".";
+}
+
+saveTextFileBtn.onclick = function () {
+    function download(filename, text) {
+        let element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+
+        element.setAttribute('download', filename);
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+    }
+
+    download("text.txt", textAreaObj.value);
 }
